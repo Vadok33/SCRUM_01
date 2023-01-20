@@ -78,6 +78,7 @@ body {
   height: calc(100% + 16px);
   z-index: -1;
   animation: BGgradient 15s ease infinite; 
+  border-radius:15px;
 }
 
 @keyframes BGgradient {
