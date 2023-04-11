@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     body {
-      color: black;
-      background-color: white;
-    }
+
+      background-image: linear-gradient(to top, #8B1A1A, #ffffff);
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
 
     h1 {
       color: firebrick;
@@ -18,26 +20,59 @@
   </style>
 </head>
 <body onload="mostrarCarrito()">
-  <div class="container">
-    <h1>Carrito de Compras</h1>
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th>Producto</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-        </tr>
-      </thead>
-      <tbody id="carrito">
-      </tbody>
-    </table>
-    <p id="descuento"></p>
-    <p>Total: <span id="total"></span></p>
+      <div class="container text-center mt-3 mb-1 border">
+        <div class="row">
+          <div class="col-12">
+            <a class="navbar-brand mx-2" href="index.html"><img src="../img/logo_trasn.png" alt="DosaGames" width="130" height="80"></a>
+          </div>
+          <div class="col-12 mb-5">
+            <h1>Carrito de Compras</h1>
+          </div>
+          <div class="col-12">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                </tr>
+              </thead>
+              <tbody id="carrito">
+              </tbody>
+            </table>
+          </div>
+          <div class="row border">
+            <div class="col-6">
+              <p id="descuento"></p>
+            </div>
+            <div class="col-6">
+              <p>Total: <span id="total"></span></p>
+            </div>
+          </div>
+         </div> 
+         <div class="container">
+        
+          <div class="row">
+            <button onclick="vaciarCarrito()" class="btn btn-primary">Vaciar Carrito</button>
+          </div>
+          <div class="row mt-1">
+            <a href="tienda.html" class="btn btn-secondary">Volver al catálogo</a>
+          </div>
+          <div class="row mt-1">
+            <a href="../pasarelaPago/pagoTarjeta.html" class="btn btn-secondary">Pagar 💲</a>
+          </div>
+          
+        </div>
+            
+      </div>
     
-    <button onclick="vaciarCarrito()" class="btn btn-primary">Vaciar Carrito</button><br>
-    <a href="tienda.html" class="btn btn-secondary">Volver al catálogo</a>
-    <a href="../pasarelaPago/pagoTarjeta.html" class="btn btn-secondary">Pagar 💲</a>
-  </div>
+    
+    
+    
+   
+    
+    
+  
 
     <script>
         function mostrarCarrito() {

@@ -2,7 +2,7 @@
 .button-89 {
   --b: 3px;   
   --s: .45em; 
-  --color: #373B44;
+  --color: black;
   
   
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
@@ -36,7 +36,7 @@
 }
 .padre{
 	width:100%;
-background:grey;
+background:firebrick;
 }
 .boton_catalogo{
 	display: table;
@@ -139,5 +139,10 @@ margin: 0 auto;
   font-size:13px;
   margin-bottom:0;
 }
+body {
 
+	background-image: linear-gradient(to top, #8B1A1A, #ffffff);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
  
