@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito de Compras</title>
+  <script src="carrito.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      color: black;
+      background-color: white;
+    }
+
+    h1 {
+      color: firebrick;
+      text-shadow: 1px 1px white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body onload="mostrarCarrito()">
+  <div class="container">
+    <h1>Carrito de Compras</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody id="carrito">
+      </tbody>
+    </table>
+    <p id="descuento"></p>
+    <p>Total: <span id="total"></span></p>
+    
+    <button onclick="vaciarCarrito()" class="btn btn-primary">Vaciar Carrito</button><br>
+    <a href="tienda.html" class="btn btn-secondary">Volver al catálogo</a>
+    <a href="../pasarelaPago/pagoTarjeta.html" class="btn btn-secondary">Pagar 💲</a>
+  </div>
+
+    <script>
+        function mostrarCarrito() {
+            var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            var carritoElemento = document.getElementById("carrito");
+            carritoElemento.innerHTML = "";
+            var total = 0;
+            for (var i = 0; i < carrito.length; i++) {
+                var producto = carrito[i];
+                var precio = producto.precio * producto.cantidad;
+                total += precio;
+                carritoElemento.innerHTML += "<tr><td>" + producto.nombre + "</td><td>€" + producto.precio.toFixed(2) + "</td><td>" + producto.cantidad + "</td><td><button onclick=\"eliminarProducto('" + producto.nombre + "')\">Eliminar</button></td></tr>";
+            }
+            if (total>=100) {
+        document.getElementById('descuento').innerHTML="Has desbloqueado un 20% de descuento!!";
+        total=total-(total*0.2);
+      }else{
+        document.getElementById('descuento').innerHTML="";
+      }
+            document.getElementById("total").innerHTML = "€" + total.toFixed(2);
+          
+           
+        }
+    </script>
+
+</body>
+</html>

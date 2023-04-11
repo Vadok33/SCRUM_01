@@ -6,24 +6,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Catálogo</title>
 		<link rel="stylesheet" href="external.css" />
+		<script src="carrito.js"></script>
 	</head>
 	<body>
-            <h1>Tienda</h1>
+	
+		<a href="carrito.html"></a><h1>Tienda</h1> 
+			<!-- Tabla para pasar los datos al carrito.html -->
+	<div style="display: none;">
+		<h1>Carrito de Compras</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Producto</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody id="carrito">
+			</tbody>
+		</table>
+		<p>Total: <span id="total"></span></p>
+		<button onclick="vaciarCarrito()">Vaciar Carrito</button>
+	</div>
+
+	<!-- Catálogo original -->
 			<div class="productos">
 				<div class="producto">
 					<div class="imagen">
 						<img src="../merchandising/almohada.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Almohada DosaGames</h3>
+						<span>15,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
-					   </div>
+							<a href="carrito.html"><button onclick="agregarProducto('Almohada', 15)"> Comprar ahora </button></a>
+						</div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Almohada', 15)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -32,15 +54,15 @@
 						<img src="../merchandising/bañador.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Bañador DosaGames</h3>
+						<span>20,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+							<a href="carrito.html"><button onclick="agregarProducto('Bañador', 20)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Bañador', 20)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -49,15 +71,15 @@
 						<img src="../merchandising/bolsa_playa.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Bolsa playa Dosagames</h3>
+						<span>25,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+							<a href="carrito.html"><button onclick="agregarProducto('Bolsa Playa', 25)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Bolsa Playa', 25)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -66,15 +88,15 @@
 						<img src="../merchandising/funkobosco.png" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
+						<h3>Funko Bosko</h3>
 						<span>10,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+							<a href="carrito.html"><button onclick="agregarProducto('Funko Bosco', 10)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Funko Bosco', 10)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -83,15 +105,15 @@
 						<img src="../merchandising/toalla.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Toalla playa DosaGames</h3>
+						<span>12,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+							<a href="carrito.html"><button onclick="agregarProducto('Toalla', 12)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Toalla', 12)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -100,15 +122,15 @@
 						<img src="../merchandising/gorra.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Gorra DosaGames</h3>
+						<span>9,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+						  <a href="carrito.html"><button onclick="agregarProducto('Gorra', 9)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Gorra', 9)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -117,15 +139,15 @@
 						<img src="../merchandising/ficha_hockey.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
+						<h3>Ficha hockey</h3>
 						<span>10,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						 <button> Comprar ahora </button>
+						 <a href="carrito.html"><button onclick="agregarProducto('Ficha hockey', 10)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Ficha hockey', 10)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -134,15 +156,15 @@
 						<img src="../merchandising/zapatillas.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Deportivas DosaGames</h3>
+						<span>45,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+						  <a href="carrito.html"><button onclick="agregarProducto('Deportivas', 45)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Deportivas', 45)"> 🛒 </button>
                         </div>
                     </div>
 				</div>
@@ -151,15 +173,15 @@
 						<img src="../merchandising/chanclas.jpeg" />
 					</div>
 					<div class="nombre">
-						<h3>Producto</h3>
-						<span>10,00 €</span>
+						<h3>Chanclas DosaGames</h3>
+						<span>20,00 €</span>
 					</div>
                     <div class="botones">
                         <div class="boton-info">
-						  <button> Comprar ahora </button>
+						  <a href="carrito.html"><button onclick="agregarProducto('Chanclas', 20)"> Comprar ahora </button></a>
 					   </div>
 					   <div class="boton-compra">
-						  <button> 🛒 </button>
+						  <button onclick="agregarProducto('Chanclas', 20)"> 🛒 </button>
                         </div>
                     </div>
 				</div>

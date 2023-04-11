@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Cabecera */
+  header {
+    background-color: firebrick;
+    padding: 20px;
+  }
+
+  /* Título de la página */
+  h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  /* Contenedor principal */
+  #main {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Sección de contacto */
+  #contacto {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: firebrick;
+  }
+  
+  /* Formulario de contacto */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: gray;
+  }

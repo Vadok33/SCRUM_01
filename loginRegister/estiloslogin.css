@@ -15,8 +15,9 @@ body:before {
   top: 0;
   left: 0;
 
-  background: linear-gradient( blue, orange);
-  opacity: 0.5;
+  background-image: linear-gradient(to top, #8B1A1A, #ffffff);
+	background-repeat: no-repeat;
+	background-size: cover;
 
 
 

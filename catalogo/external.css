@@ -9,9 +9,11 @@ body {
 	min-height: 100vh;
 	display: grid;
 	place-content: center;
-    background: linear-gradient(to bottom, blue, orange);
-    background-repeat: no-repeat;
+	background-image: linear-gradient(to top, #8B1A1A, #ffffff);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 .general {
 	width: 80vw;
 	height: 80vh;
