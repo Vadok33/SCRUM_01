@@ -7,17 +7,37 @@
 	<title>Pasarela de pago</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="estilos.css">
+	<style>
+		html, body{
+		 height:100%;
+	  }
+		 body {
+	 
+		   background-image: linear-gradient(to top, #8B1A1A, #ffffff);
+		   background-repeat: no-repeat;
+		   background-size: cover;
+		   }
+	   </style>
 </head>
 <body>
+
+	<!---------- logo ---------->
+
+	<div class="container text-center mt-3 mb-3">
+		<a class="navbar-brand mx-2" href="../index.html"><img src="../img/logo_trasn.png" alt="DosaGames" width="130" height="80"></a>
+	</div>
+
+	<!---------- Tarjeta ---------->
+
 	<div class="contenedor">
 
-		<!-- Tarjeta -->
+		
 		<section class="tarjeta" id="tarjeta">
 			<div class="delantera">
 				<div class="logo-marca" id="logo-marca">
-					<!-- <img src="img/logos/visa.png" alt=""> -->
+					
 				</div>
-				<img src="img/chip-tarjeta.png" class="chip" alt="">
+				<img src="../img/chip-tarjeta.png" class="chip" alt="">
 				<div class="datos">
 					<div class="grupo" id="numero">
 						<p class="label">Número Tarjeta</p>
@@ -54,14 +74,16 @@
 			</div>
 		</section>
 
-		<!-- Contenedor Boton Abrir Formulario -->
+		<!---------- Botn Formulario ---------->
+
 		<div class="contenedor-btn">
 			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
 				<i class="fas fa-plus"></i>
 			</button>
 		</div>
 
-		<!-- Formulario -->
+		<!---------- Formulario ---------->
+		
 		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
 			<div class="grupo">
 				<label for="inputNumero">Número Tarjeta</label>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de adivinanza</title>
+  <!-- Incluye las hojas de estilo de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Define un estilo personalizado para el fondo -->
+  <style>
+   html, body{
+    height:100%;
+ }
+    body {
+
+      background-image: linear-gradient(to top, #8B1A1A, #ffffff);
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+  </style>
+</head>
+<body>
+  <div class="container text-center mt-3 mb-3">
+    <a class="navbar-brand mx-2" href="../../index.html"><img src="../../img/logo_trasn.png" alt="DosaGames" width="130" height="80"></a>
+</div>
+  <div class="container py-5">
+    <h1 class="text-center mb-4 text-white">Juego de adivinanza</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card bg-white">
+          <div class="card-body">
+            <p class="card-text mb-2">Introduce un número entre 1 y 10:</p>
+            <div class="input-group mb-3">
+              <input type="number" id="userGuess" class="form-control" min="1" max="10">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="checkGuess()"><i class="fa fa-check"></i></button>
+              </div>
+            </div>
+            <p id="message" class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Genera un número aleatorio entre 1 y 10
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    // Obtiene el elemento del input y el elemento del mensaje
+    const userGuessInput = document.getElementById("userGuess");
+    const messageElement = document.getElementById("message");
+
+    // Comprueba el número introducido por el usuario y muestra un mensaje
+    function checkGuess() {
+      const userGuess = parseInt(userGuessInput.value);
+      if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+        messageElement.textContent = "Por favor introduce un número válido entre 1 y 10.";
+      } else if (userGuess === randomNumber) {
+        messageElement.textContent = "¡Felicidades! Has acertado el número.";
+        // Deshabilita el input y el botón cuando el usuario acierta
+        userGuessInput.disabled = true;
+        document.querySelector(".input-group-append button").disabled = true;
+      } else if (userGuess < randomNumber) {
+        messageElement.textContent = "El número es mayor que " + userGuess + ".";
+      } else {
+        messageElement.textContent = "El número es menor que " + userGuess + ".";
+      }
+      // Limpia el valor del input
+      userGuessInput.value = "";
+    }
+  </script>
+  
+  <!-- Incluye las librerías de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
