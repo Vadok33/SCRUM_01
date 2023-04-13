@@ -5,6 +5,9 @@
   <script src="carrito.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
+    html, body{
+    height:100%;
+ }
     body {
 
       background-image: linear-gradient(to top, #8B1A1A, #ffffff);
@@ -49,21 +52,19 @@
               <p>Total: <span id="total"></span></p>
             </div>
           </div>
-         </div> 
-         <div class="container">
+        </div> 
+          <div class="container">
         
-          <div class="row">
-            <button onclick="vaciarCarrito()" class="btn btn-primary">Vaciar Carrito</button>
-          </div>
-          <div class="row mt-1">
-            <a href="tienda.html" class="btn btn-secondary">Volver al catálogo</a>
-          </div>
-          <div class="row mt-1">
-            <a href="../pasarelaPago/pagoTarjeta.html" class="btn btn-secondary">Pagar 💲</a>
-          </div>
-          
-        </div>
-            
+            <div class="row">
+              <button onclick="vaciarCarrito()" class="btn btn-primary">Vaciar Carrito</button>
+            </div>
+            <div class="row mt-1">
+              <a href="tienda.html" class="btn btn-secondary">Volver al catálogo</a>
+            </div>
+            <div class="row mt-1">
+              <a href="../pasarelaPago/pagoTarjeta.html" class="btn btn-secondary">Pagar 💲</a>
+            </div>
+          </div>   
       </div>
     
     
